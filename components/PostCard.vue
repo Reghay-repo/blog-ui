@@ -4,13 +4,15 @@
       :class="{ 'w-full md:flex': props.isBig, 'md:w-1/3': !props.isBig }"
   >
     <div
-        class="px-4 lg:px-6"
+        class="px-9 lg:px-5"
         :class="{ 'md:w-2/3': props.isBig }"
     >
       <NuxtLink :to="props.post.slug">
+        <NuxtImg preload loading="lazy" :src="props.post.image" :alt="props.post.title"
+                 class="rounded-xl" width="640"
+                 height="50%"
+              ></NuxtImg>
 
-        <NuxtImg preload loading="lazy"  :src="props.post.image" :alt="props.post.title" sizes="100vw 100vw sm:50vw md:400px"
-                 class="rounded-xl " width="full" height="100"/>
       </NuxtLink>
     </div>
     <div

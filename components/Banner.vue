@@ -15,7 +15,7 @@
         </div>
         <div class="md:w-1/2 mt-8 md:mt-0 flex justify-center md:justify-end">
           <!--          <img />-->
-          <NuxtImg class="rounded-t-lg" src="https://i.ibb.co/J2BtZdg/Rectangle-56-1.png" alt="banner"/>
+          <NuxtImg preload  class="rounded-t-lg" src="https://i.ibb.co/J2BtZdg/Rectangle-56-1.png" alt="banner"/>
         </div>
       </div>
       <div
@@ -28,7 +28,7 @@
         <div class="flex justify-end md:absolute md:bottom-4 md:right-4 lg:bottom-0 lg:right-0">
           <!--          <img src="https://i.ibb.co/rGfP7mp/Rectangle-59-1.png" alt="banner" class="md:w-20 md:h-20 lg:w-full lg:h-full"/>-->
 
-          <NuxtImg src="https://i.ibb.co/rGfP7mp/Rectangle-59-1.png" alt="banner_mini" sizes="100vh sm:50vw md:400px lg:700px" height="100px"
+          <NuxtImg src="https://i.ibb.co/rGfP7mp/Rectangle-59-1.png" alt="banner_mini" preload  sizes="100vh sm:50vw md:400px lg:700px" height="100px"
                    />
         </div>
       </div>

@@ -12,7 +12,7 @@
         loading="lazy"
         :src="post.image as string"
         :alt="post.title"
-
+preload
         width="200vw"
         height="60%"
         class="rounded-xl  my-10  mx-auto "

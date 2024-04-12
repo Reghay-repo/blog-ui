@@ -21,7 +21,9 @@ const props = defineProps<{
   <div class="max-w-lg mx-auto ">
     <div class=" border-gray-200 rounded-lg max-w-sm mb-5">
       <a :href="props.post.slug">
-        <img class="rounded-t-lg" :src="props.post.image" :alt="props.post.title">
+<!--        <img class="rounded-t-lg" :src="props.post.image" :alt="props.post.title">-->
+        <NuxtImg class="rounded-t-lg" :src="props.post.image" :alt="props.post.title"
+/>
       </a>
       <div class="p-5">
         <a :href="props.post.slug">

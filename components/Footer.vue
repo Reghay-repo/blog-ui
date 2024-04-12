@@ -6,7 +6,7 @@
 
 <!-- component -->
 <!-- Foooter -->
-<section class="" style="background-color: #6B5500">
+<section class="footer" style="background-color: #6B5500">
     <div class="max-w-screen-xl px-4 py-12 mx-auto space-y-8 overflow-hidden sm:px-6 lg:px-8 text-white">
         <nav class="flex flex-wrap justify-center -mx-5 -my-2">
             <div class="px-5 py-2">

@@ -8,8 +8,7 @@
         :class="{ 'md:w-2/3': props.isBig }"
     >
       <a :href="props.post.slug" :title="props.post.title">
-        <img :src="props.post.image" :alt="props.post.title" class="rounded-xl block">
-<!--        <NuxtImg :src="props.post.image" :alt="props.post.title" class="rounded-xl block"/>-->
+        <NuxtImg :src="props.post.image" :alt="props.post.title" class="rounded-xl block"/>
       </a>
     </div>
     <div

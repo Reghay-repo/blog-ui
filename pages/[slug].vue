@@ -1,4 +1,5 @@
 <template>
+   <Banner/>
   <article >
     <h3 class="mt-6 mb-3 text-5xl   text-center font-pt ">
       {{ post.title }}
@@ -6,11 +7,15 @@
     <div class="my-6 text-center font-pt  text-base text-gray">
       <time>{{ post.date }}</time> &mdash; {{ post.author }}
     </div>
-    <img
-        :src="post.image"
+    <NuxtImg
+        v-if="post.image"
+        loading="lazy"
+        :src="post.image as string"
         :alt="post.title"
+        sizes="100vh  md:400px lg:500px"
         class="rounded-xl block my-10 mx-auto lg:w-full md:w-4/5 sm:w-full"
     />
+
     <div class="max-w-3xl mx-auto my-8">
       <div
           class="content font-pt text-lg"

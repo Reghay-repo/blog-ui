@@ -1,7 +1,7 @@
 <template>
   <div
       class="pb-8 lg:pb-12"
-      :class="{ 'w-full md:flex': isBig, 'md:w-1/3': !props.isBig }"
+      :class="{ 'w-full md:flex': props.isBig, 'md:w-1/3': !props.isBig }"
   >
     <div
         class="px-4 lg:px-6"
@@ -15,19 +15,18 @@
         class="px-4 lg:px-6"
         :class="{ 'md:w-1/3': isBig }"
     >
-      <h3 class="my-3" :class="{ 'md:mt-0 md:mb-6': isBig }">
-        <a :href="props.post._path" :title="props.post.title">{{ props.post.title }}</a>
-      </h3>
-      <div class="font-serif text-lg">
+      <h2 class="my-4 font-rubik text-2xl font-light " :class="{ 'md:mt-0 md:-mb-6': isBig }">
+        <a :href="props.post.slug" :title="props.post.title">{{ props.post.title }}</a>
+      </h2>
+      <div class="font-rubik mt-8 text-lg">
         <p
-            class="my-3"
+            class="my-4"
             :class="{ 'md:my-6': isBig }"
         >
-          {{ props.post.excerpt }}
+          {{ props.post.content.slice(1,235) }}
         </p>
       </div>
       <div class="flex items-center">
-        <img :src="props.post.avatar" :alt="props.post.author" class="w-12 h-12 rounded-full">
         <div class="ml-4">
           <strong class="block">{{ props.post.author }}</strong>
           <span>{{ props.post.date }}</span>
@@ -39,17 +38,12 @@
 
 <script setup lang="ts">
 
-const props = defineProps({
-  post: {
-    type: Object,
-    default: () => {
-    }
-  },
-  isBig: {
-    type: Boolean,
-    default: false
-  }
-})
+import type Post from "~/types/post";
+
+const props = defineProps<{
+  post:Post;
+  isBig:boolean,
+}>()
 
 
 </script>

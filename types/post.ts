@@ -6,4 +6,5 @@ export default interface Post {
     image	:string;
     date	:string;
     content:string;
+    slug:string;
 }

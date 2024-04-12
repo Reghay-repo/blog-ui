@@ -7,9 +7,11 @@
         class="px-4 lg:px-6"
         :class="{ 'md:w-2/3': props.isBig }"
     >
-      <a :href="props.post.slug" :title="props.post.title">
-        <NuxtImg preload  :src="props.post.image" :alt="props.post.title" class="rounded-xl block"/>
-      </a>
+      <NuxtLink :to="props.post.slug">
+
+        <NuxtImg preload loading="lazy"  :src="props.post.image" :alt="props.post.title" sizes="100vw 100vw sm:50vw md:400px"
+                 class="rounded-xl " width="full" height="100"/>
+      </NuxtLink>
     </div>
     <div
         class="px-4 lg:px-6"
@@ -23,7 +25,7 @@
             class="my-4"
             :class="{ 'md:my-6': isBig }"
         >
-          {{ props.post.content.slice(1,235) }}
+          {{ props.post.content.slice(1, 235) }}
         </p>
       </div>
       <div class="flex items-center">
@@ -41,8 +43,8 @@
 import type Post from "~/types/post";
 
 const props = defineProps<{
-  post:Post;
-  isBig:boolean,
+  post: Post;
+  isBig: boolean,
 }>()
 
 

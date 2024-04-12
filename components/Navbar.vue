@@ -24,34 +24,34 @@
             </div>
           </div>
         </div>
-        <div class="hidden md:flex md:space-x-10 list-none">
-          <li>
-            <NuxtLink to="/">
-              <a href="#" class="text-base font-normal text-gray-500 list-none hover:text-gray-900"
-                 target="">Articles</a>
-            </NuxtLink>
-          </li>
-          <li>
-               <NuxtLink to="/about">
-              <a href="#" class="text-base font-normal text-gray-500 list-none hover:text-gray-900"
-                 target="">About us</a>
-            </NuxtLink>
-          </li>
-          <li>
-                    <NuxtLink to="/contact">
-              <a href="#" class="text-base font-normal text-gray-500 list-none hover:text-gray-900"
-                 target="">Contact us</a>
-            </NuxtLink>
-          </li>
-        </div>
-<!--        <div class="hidden md:absolute md:flex md:items-center md:justify-end md:inset-y-0 md:right-0">-->
-<!--          <div class="inline-flex rounded-full shadow">-->
-<!--            <div href="#"-->
-<!--                 class="inline-flex items-center px-4 py-2 text-base text-gray-900 bg-white border border-transparent rounded-full cursor-pointer font-base hover:bg-gray-50 ">-->
-<!--              Sign in-->
-<!--            </div>-->
-<!--          </div>-->
-<!--        </div>-->
+          <ul class="hidden md:flex md:space-x-10 list-none">
+            <li>
+              <NuxtLink to="/">
+                <a href="#" class="text-base font-normal text-gray-500 list-none hover:text-gray-900"
+                   target="">Articles</a>
+              </NuxtLink>
+            </li>
+            <li>
+              <NuxtLink to="/about">
+                <a href="#" class="text-base font-normal text-gray-500 list-none hover:text-gray-900"
+                   target="">About us</a>
+              </NuxtLink>
+            </li>
+            <li>
+              <NuxtLink to="/contact">
+                <a href="#" class="text-base font-normal text-gray-500 list-none hover:text-gray-900"
+                   target="">Contact us</a>
+              </NuxtLink>
+            </li>
+          </ul>
+        <!--        <div class="hidden md:absolute md:flex md:items-center md:justify-end md:inset-y-0 md:right-0">-->
+        <!--          <div class="inline-flex rounded-full shadow">-->
+        <!--            <div href="#"-->
+        <!--                 class="inline-flex items-center px-4 py-2 text-base text-gray-900 bg-white border border-transparent rounded-full cursor-pointer font-base hover:bg-gray-50 ">-->
+        <!--              Sign in-->
+        <!--            </div>-->
+        <!--          </div>-->
+        <!--        </div>-->
       </nav>
     </div>
   </div>

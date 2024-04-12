@@ -1,11 +1,8 @@
 <template>
-  <Header/>
+<!--  <Header/>-->
+  <Navbar />
+  <Banner />
   <main class="max-w-screen-xl mx-auto px-4 sm:px-6 xl:px-10 py-5 xl:py-10 text-balance text-black font-pt">
-    <div class="mt-56" :class="[scrollY > 200 ? 'visible' : 'hidden']">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem earum ipsa ipsam itaque nemo tempore ut
-      voluptatum? Deserunt dolorum error ex obcaecati provident temporibus tenetur! Alias maiores praesentium
-      reprehenderit saepe.
-    </div>
     <NuxtPage/>
   </main>
   <div class="fixed bottom-0 right-0 p-4">
@@ -16,11 +13,16 @@
       </svg>
     </button>
   </div>
+  <Footer/>
+
 </template>
 
 
 <script setup lang="ts">
 
+onMounted(() => {
+  window.scrollTo({top: 0, left: 0, behavior: "smooth"});
+})
 
 function GoTop() {
   window.scrollTo({top: 0, left: 0, behavior: "smooth"})

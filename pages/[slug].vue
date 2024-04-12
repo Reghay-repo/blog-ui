@@ -9,8 +9,7 @@
     <img
         :src="post.image"
         :alt="post.title"
-        width="80%"
-        class="rounded block my-10 mx-auto"
+        class="rounded-xl block my-10 mx-auto lg:w-full md:w-4/5 sm:w-full"
     />
     <div class="max-w-3xl mx-auto my-8">
       <div
@@ -46,11 +45,11 @@ import type Post from "~/types/post";
 import {posts} from "~/data/data";
 import {useRoute} from "vue-router";
 
-const post: Post = posts[0];
+const post  = ref<Post>({} as Post);
 
 const route = useRoute();
 onMounted(() => {
-console.log(posts.find((post)=> post.slug == route.params.slug))
+  post.value = posts.find((post)=> post.slug == route.params.slug) as Post;
 })
 
 

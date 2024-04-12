@@ -40,14 +40,22 @@
 </template>
 
 <script setup lang="ts">
-
 import type Post from "~/types/post";
+
 import {posts} from "~/data/data";
 import {useRoute} from "vue-router";
-
+const route = useRoute();
 const post  = ref<Post>({} as Post);
 
-const route = useRoute();
+useSeoMeta({
+  title: post.value.title,
+  ogTitle: post.value.title,
+  description: post.value.content,
+  ogDescription: post.value.content,
+  ogImage: post.value.image,
+})
+
+
 onMounted(() => {
   post.value = posts.find((post)=> post.slug == route.params.slug) as Post;
 })

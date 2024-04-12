@@ -1,7 +1,7 @@
 <template>
-   <Banner/>
-  <article >
-    <h3 class="mt-6 mb-3 text-5xl   text-center font-pt ">
+  <Banner/>
+  <article class="flex-col justify-center items-center">
+    <h3 class="mt-6 mb-3 text-5xl    text-center font-pt ">
       {{ post.title }}
     </h3>
     <div class="my-6 text-center font-pt  text-base text-gray">
@@ -12,8 +12,10 @@
         loading="lazy"
         :src="post.image as string"
         :alt="post.title"
-        sizes="100vh  md:400px lg:500px"
-        class="rounded-xl block my-10 mx-auto lg:w-full md:w-4/5 sm:w-full"
+
+        width="200vw"
+        height="60%"
+        class="rounded-xl  my-10  mx-auto "
     />
 
     <div class="max-w-3xl mx-auto my-8">
@@ -37,7 +39,7 @@
 
     <div class="flex flex-wrap gap-4 justify-center py-3">
       <div v-for="(post, key) in posts.slice(0,3)">
-        <RecomendationCard :post="post" />
+        <RecomendationCard :post="post"/>
       </div>
     </div>
 
@@ -49,8 +51,9 @@ import type Post from "~/types/post";
 
 import {posts} from "~/data/data";
 import {useRoute} from "vue-router";
+
 const route = useRoute();
-const post  = ref<Post>({} as Post);
+const post = ref<Post>({} as Post);
 
 useSeoMeta({
   title: post.value.title,
@@ -62,7 +65,7 @@ useSeoMeta({
 
 
 onMounted(() => {
-  post.value = posts.find((post)=> post.slug == route.params.slug) as Post;
+  post.value = posts.find((post) => post.slug == route.params.slug) as Post;
 })
 
 

@@ -9,7 +9,7 @@
     >
       <NuxtLink :to="props.post.slug">
         <NuxtImg preload loading="lazy" :src="props.post.image" :alt="props.post.title"
-                 class="rounded-xl"width="700"
+                 class="rounded-xl" width="700"
                  fit="cover"
               ></NuxtImg>
 
